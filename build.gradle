@@ -16,6 +16,16 @@ allprojects {
     repositories {
         jcenter()
     }
+
+    task allTask << {
+        println project.name
+    }
+}
+
+subprojects {
+    task subTask {
+        println project.name
+    }
 }
 
 task clean(type: Delete) {
